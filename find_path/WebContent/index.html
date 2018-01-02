@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>findPath</title>
+<!--table相关-->
+<link rel="stylesheet" type="text/css" href="js/table/css/tabulator_simple.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/map.css"/>
+</head>
+<body>
+<div id="map"></div>
+<div id="tableCon">
+    <div class="tl_border"></div>
+    <div class="tr_border"></div>
+    <div class="bl_border"></div>
+    <div class="br_border"></div>
+    <div id="tableHeader">
+        <div id="tableHeadText">任务列表</div>
+        <div id="tableOpenIcon">∧</div>
+    </div>
+    <div id="table"></div>
+    <div class="controlBar">
+        <select id="carList" class="control_select"></select>
+        <select id="driverList" class="control_select"></select>
+	    <input id="cancelBtn" class="control_button_disabled" type="button" value="取消" title="取消使用该搜索路径"/>
+	    <input id="sureBtn" class="control_button_disabled" type="button" value="确定" title="确定使用该搜索路径"/>
+	    <input id="findPathBtn" class="control_button" type="button" value="搜索" title="搜索路径"/>
+    </div>
+</div>
+<div class="init-loading"></div>
+<SCRIPT stype=text/javascript>
+	window.onload = function() {
+		new CustomData(
+			"http://test.renyaoxing.com/transport_service/Transports/road_plan", 
+			"http://test.renyaoxing.com/transport_service/Dispatches/deal_road", 
+			["rdc", "ukey"]);
+	}
+</SCRIPT>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/table/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/table/js/moment.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/table/js/jquery.sparkline.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/table/js/tabulator.min.js" charset="utf-8"></script>
+<!--d3相关-->
+<script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+<!--map相关-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zYZKCBoQLm1Ykb2BcVQacfg6rq8kynjv"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+</body>
+</html>

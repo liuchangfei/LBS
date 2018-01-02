@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>车辆轨迹监控</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!--table相关-->
+    <link rel="stylesheet" type="text/css" href="js/table/css/tabulator_simple.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/map.css"/>
+    <link rel="stylesheet" type="text/css" href="css/routeControl.css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/table/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/table/js/moment.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/table/js/jquery.sparkline.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/table/js/tabulator.min.js" charset="utf-8"></script>
+    <!--tree相关-->
+    <link rel="stylesheet" type="text/css" href="js/tree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="js/tree/js/jquery.ztree.core.js" charset="utf-8"></script>
+    <!--d3相关-->
+    <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/ghca_charts.min.js" charset="utf-8"></script>
+    <!--map相关-->
+    <!--<script type="text/javascript" src="js/jsonData.js"></script>-->
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zYZKCBoQLm1Ykb2BcVQacfg6rq8kynjv"></script>
+    <script type="text/javascript" src="js/mapv.js"></script>
+    <script type="text/javascript" src="js/LuShu.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/testData.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="tableCon">
+        <div class="tl_border"></div>
+        <div class="tr_border"></div>
+        <div class="bl_border"></div>
+        <div class="br_border"></div>
+        <div id="tableHeader">
+            <div id="tableHeadText">运单信息</div>
+            <div id="tableOpenIcon">∧</div>
+        </div>
+	    <div id="table"></div>
+	</div>
+	<div class="init-loading"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var isAdmin = ObjectUtil.getQueryString("isAdmin") === "true";
+            var trackNum = parseInt(ObjectUtil.getQueryString("trackNum"));
+            var mapStyle = ObjectUtil.getQueryString("mapStyle");
+            var mapControl = new MapControl(isAdmin, mapStyle);
+            //$.post("https://www.renyaoxing.com/cargopc/gis/showOrderTransportByid/53", function(data) {
+	            new CustomData(mapControl).load(testData, true);
+	            //new CustomData(mapControl).load(data, true);
+	        //});
+	        /*
+	        .error(function() { 
+	            //隐藏loading
+	            $('.init-loading').css({"display":"none"});
+	            alert("初始化数据获取错误，请重试。"); 
+	        });
+	        */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#fff;
+    font-style:italic;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#fff;
+    font-style:italic;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#fff;
+    font-style:italic;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#fff;
+    font-style:italic;
+}
+#drive_search_box {
+    width:290px;
+    padding:0px;
+    font-family: Arial,Helvetica,"Microsoft YaHei",sans-serif;
+    font-size: 13px;
+}
+#drive_search_box input {
+    width:190px;
+    height:33px;
+    outline:none;
+    margin-left:10px;
+    background: none;
+    color: #fff;
+}
+#drive_start_input {
+    border:0px;
+    border-bottom:1px solid rgba(20,255,255,0.5);
+}
+#drive_end_input {
+    border:0px;
+}
+#drive_search_box .input_con {
+    float:left;
+}
+#drive_search_btn {
+    float:right;
+    width:52px;
+    height:66px;
+    background-color:rgba(20,255,255,0.5);
+    color:#fff;
+    line-height:66px;
+    text-align:center;
+    cursor: pointer;
+}
+#drive_search_btn:hover {
+    background-color:rgba(20,255,255,0.25);
+}
+#drive_result_con {
+    float:left;
+    width:100%;
+    margin-top:5px;
+    margin-bottom:5px;
+    overflow-y:auto;
+}
+#drive_result {
+    margin-top:10px;
+}
+.lushu_control {
+    float: left;
+    width: 100%;
+/*    border-top: 1px solid #cccccc; */
+    padding-top: 0px;
+}
+
+.lushu_control .play {
+    float:left;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/play_btn.svg) no-repeat center center;
+}
+.lushu_control .play:hover {
+    cursor:pointer;
+    float:left;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/play_over_btn.svg) no-repeat center center;
+}
+.lushu_control .pause {
+    float:left;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/pause_btn.svg) no-repeat center center;
+}
+.lushu_control .pause:hover {
+    cursor:pointer;
+    float:left;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/pause_over_btn.svg) no-repeat center center;
+}
+.lushu_control .stop {
+    float:left;
+    margin-left:5px;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/stop_btn.svg) no-repeat center center;
+}
+.lushu_control .stop:hover {
+    cursor:pointer;
+    float:left;
+    margin-left:5px;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/stop_over_btn.svg) no-repeat center center;
+}
+
+.lushu_control .search_clear {
+    float:right;
+    margin-right:5px;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/back_btn.svg) no-repeat center center;
+}
+.lushu_control .search_clear:hover {
+    cursor:pointer;
+    float:right;
+    margin-right:5px;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/back_over_btn.svg) no-repeat center center;
+}
+
+.lushu_control .search_save {
+    float:right;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/save_btn.svg) no-repeat center center;
+}
+.lushu_control .search_save:hover {
+    cursor:pointer;
+    float:right;
+    width:24px;
+    height:24px;
+    background:url(../assets/images/save_over_btn.svg) no-repeat center center;
+}
+
+.check_point_arrow_hide {
+    float:left;
+    width:10px;
+    height:10px;
+    margin-top:5px;
+    margin-right:5px;
+    margin-left:-10px;
+}
+
+.check_point_arrow {
+    width:0px;
+    height:0px;
+    border-top:5px solid transparent;
+    border-left:10px solid rgba(20,255,255,0.75);
+    border-bottom:5px solid transparent;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
+    margin-left:-10px;
+}
+
+.start_check_point_icon {
+    width:6px;
+    height:6px;
+    border-radius:6px;
+    border:solid #b9ffab 2px;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.middle_check_point_icon {
+    width:6px;
+    height:6px;
+    border-radius:6px;
+    border:solid rgba(20,255,255,0.75) 2px;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.end_check_point_icon {
+    width:6px;
+    height:6px;
+    border-radius:6px;
+    border:solid #ff8a8a 2px;
+    line-height:20px;
+    float:left;
+    margin-top:5px;
+    margin-right:5px;
+}
+
+.check_point_label {
+    line-height:20px;
+    padding-left:41px;
+}
+
+#drive_search_box .loading {
+    display:none;
+    position:absolute;
+    width:100%;
+    margin-top:-5px;
+    margin-left:-5px;
+    background:rgba(0,0,0,0.5) url(../assets/images/loading.svg) no-repeat center center;
+}

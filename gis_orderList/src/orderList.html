@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>订单列表</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!--table相关-->
+    <link rel="stylesheet" type="text/css" href="js/table/css/tabulator_simple.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/orderList.css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/table/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/table/js/moment.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/table/js/jquery.sparkline.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/table/js/tabulator.min.js" charset="utf-8"></script>
+    <!--d3相关-->
+    <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+    <!--map相关-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zYZKCBoQLm1Ykb2BcVQacfg6rq8kynjv"></script>
+    <script type="text/javascript" src="js/testData.js"></script>
+    <script type="text/javascript" src="js/TextIconOverlay.min.js"></script>
+    <script type="text/javascript" src="js/MarkerClusterer.min.js"></script>
+    <script type="text/javascript" src="js/mapv.min.js"></script>
+    <script type="text/javascript" src="js/orderListMap.min.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="tableCon">
+        <div class="tl_border"></div>
+        <div class="tr_border"></div>
+        <div class="bl_border"></div>
+        <div class="br_border"></div>
+        <div id="tableHeader">
+            <div id="tableHeadText">订单列表</div>
+            <div id="tableOpenIcon">∧</div>
+        </div>
+        <div id="table"></div>
+    </div>
+    <div class="init-loading"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            //$.post("https://www.renyaoxing.com/cargopc/gis/showOrderTransportByid/53", function(data) {
+                new MapControl("map", orderList, "https://www.renyaoxing.com/cargopc/gis/showOrderTransportByid/");
+            //});
+        }
+        
+    </script>
+</body>
+</html>
